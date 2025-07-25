@@ -18,7 +18,7 @@ Used firmware on the Dongle : DSMR-API 3.5.9+1284 (13/08/2023)
   * When used with a Docker setup of Domoticz change the Docker location of your scripts/lua 
   * The .json files are imported into the script and decoded using JSON.lua
   * Create 2 virtual P1 meter devices ; one for electricity (here 2303) and one for Gas (here 2304)
-  * Save and activate the scipt in dzVents.
+  * Copy, paste, save and activate the scipt in dzVents.
 
 <b>Debugging :</b>
 Use RESTer (or alike) in your browser to connect to the dongle's API.
