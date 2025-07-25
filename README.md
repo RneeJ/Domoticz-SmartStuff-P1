@@ -24,5 +24,6 @@ Used firmware on the Dongle : DSMR-API 3.5.9+1284 (13/08/2023)
 Use RESTer (or alike) in your browser to connect to the dongle's API.
 
 <b>Known issues :</b>
+  * Power : the P1 port on my ZIV (Enexis) meter doesn't deliver enough powewr for the dongle. An external poweradapter is needed.
   * The dongle works well for the task but is slow in resonding to setup  and connecting etc
   * strange things happen when the script is saved from within a mobile device ...
