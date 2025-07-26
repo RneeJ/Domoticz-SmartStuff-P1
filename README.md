@@ -14,11 +14,11 @@ Used firmware on the Dongle : DSMR-API 3.5.9+1284 (13/08/2023)
   * Configure wifi for your network, save these. Be patient for the device to reboot and connect to your wifi network.
   * The device creates every second at <code>api/v2/sm/actual</code> a .json file from the received DSMR meter P1 telegram.
   * Change in the script the local DSMR_IP adres used for your needs (here 192.168.2.102)
-  * Copy <b>JSON.lua</b> in your <code>domoticz/scripts/lua</code>. If not present, get it here : https://regex.info/blog/lua/json
-  * When used with a Docker setup of Domoticz change the Docker location of your scripts/lua 
+  * <b>JSON.lua</b> must be in your <code>domoticz/scripts/lua</code>. If not present, get it here : https://regex.info/blog/lua/json
+  * When used with a Docker setup of Domoticz change the Docker location of your scripts/lua (?)
   * The .json files are imported into the script and decoded using JSON.lua
   * Create 2 virtual P1 meter devices ; one for electricity (here 2303) and one for Gas (here 2304)
-  * Copy, paste, save and activate the scipt in dzVents.
+  * Copy, paste, save and activate the script in dzVents.
 
 <b>Debugging :</b>
 Use RESTer (or alike) in your browser to connect to the dongle's API.
@@ -26,4 +26,4 @@ Use RESTer (or alike) in your browser to connect to the dongle's API.
 <b>Known issues :</b>
   * Power : the P1 port on my ZIV (Enexis) meter doesn't deliver enough power for the dongle. An external 5 volts poweradapter is needed.
   * The dongle works well for the task but is slow in responding to setup and connecting etc
-  * strange things happen when the script is saved without chage, changing someting (a space) helps...
+  * strange things happen when the script is saved without change, changing someting (a space) helps...(?)
