@@ -1,5 +1,5 @@
 # Domoticz-SmartStuff-P1
-DzVents Script for connecting Smart-Stuff P1 port (not Pro) Wifi dongle to Domoticz.
+DzVents(Lua) Script for connecting Smart-Stuff P1 port (not Pro) Wifi dongle to Domoticz.
 
 This is an older type P1 dongle based on an Esp8266, constructed and programmed by Martijn Hendriks / Smart-Stuff (https://github.com/mhendriks).
 
