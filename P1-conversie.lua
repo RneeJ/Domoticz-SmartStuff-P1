@@ -16,6 +16,9 @@ Firmware      = "DSMR-API"           -- Vul in welke firmware je gebruikt.
                                      --
 domoticz_in_docker = "Ja"            -- Zet domoticz_in_docker op Ja als domoticz op Docker is 
                                      -- geinstalleerd. Keuze  "Ja" of "Nee" (hoofdlettergevoelig)
+-- Notes ---
+-- RneeJ_20250729 Als script draait in dzVents in Domoticz is geen apart pad setup nodig, dus kies "else" (?)
+-- RneeJ_20250729 Lua heeft alleen floating-point getallen vervangen in "couterdata" %d door %f         
 -- -----------------------------------------------------------------------------------------
 commandArray = {}
 
@@ -39,7 +42,7 @@ end
     Power_Returned = tonumber(jsonCPM.power_returned.value)
     
     p1CounterIdx = 2303
-    counterData =  string.format("%d|0|%d;%d;%d;%d;%d;%d", p1CounterIdx, Energy_Delivered_Tariff1 * 1000, Energy_Delivered_Tariff2 * 1000, Energy_Returned_Tariff1 * 1000, Energy_Returned_Tariff2 * 1000, Power_Delivered * 1000, Power_Returned * 1000)
+    counterData =  string.format("%f|0|%f;%f;%f;%f;%f;%f", p1CounterIdx, Energy_Delivered_Tariff1 * 1000, Energy_Delivered_Tariff2 * 1000, Energy_Returned_Tariff1 * 1000, Energy_Returned_Tariff2 * 1000, Power_Delivered * 1000, Power_Returned * 1000)
     table.insert (commandArray, {['UpdateDevice'] = counterData})
     
     Gas_Delivered = tonumber(jsonCPM.gas_delivered.value)*1000
